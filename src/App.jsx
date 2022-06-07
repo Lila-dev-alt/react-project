@@ -14,8 +14,11 @@ function App() {
 
   useEffect(() => {
     fetch(url).then(response => {
-      setData(response.json());
-      console.log({ data });
+      return response.json();
+    }).then(donnee => {
+      console.log(donnee);
+      setData(donnee.results);
+
     });
   }, []);
 
@@ -23,6 +26,7 @@ function App() {
 
   return (
     <>
+      <h1> Liste de Films populaires</h1>
       <MovieList movies={data} />
     </>
   );

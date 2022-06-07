@@ -5,7 +5,7 @@ function MovieList(props) {
   const { movies } = props;
 
   const instances = movies.map(item => {
-    console.log(item);
+
     return (
 
       <Movie key={item.id} name={item.title} summary={item.overview}
