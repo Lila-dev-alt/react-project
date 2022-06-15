@@ -1,25 +1,25 @@
 import React from 'react';
 
 
-function Movie(props){
+function Movie(props) {
 
 
-    const {
-        name,
-        summary,
-        img,
-        vote
-    } = props;
+  const {
+    name,
+    summary,
+    img,
+    vote
+  } = props;
 
 
-    return (
-        <li className="Movie">
-          <div className="name">{name}</div>
-          <div className="summary">{summary}</div>
-          <img src={img} alt={name} />
-          <div className="vote">{vote}</div>
-        </li>
-      );
+  return (
+    <li className="Movie list">
+      <div className="name bold">{name}</div>
+      <div className="summary">{summary}</div>
+      <img className='img' src={"https://image.tmdb.org/t/p/w300/" + img} alt={name} />
+      <div className="vote">Vote: {vote}</div>
+    </li>
+  );
 
 }
 
